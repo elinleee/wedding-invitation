@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "backend": "nodemon index-js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build --remote upstream"
   },
   "homepage": "https://darangji.github.io/wedding-invitation/",
   "eslintConfig": {
