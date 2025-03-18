@@ -10,6 +10,7 @@ export default defineConfig({
     watch: {
       usePolling: true,
     }
-  }
+  },
+  base: "wedding-invitation"
 });
 
