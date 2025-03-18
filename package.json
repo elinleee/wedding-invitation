@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -20,7 +22,7 @@
     "eject": "react-scripts eject",
     "backend": "nodemon index-js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build --remote upstream"
   },
   "homepage": "https://darangji.github.io/wedding-invitation/",
   "eslintConfig": {
