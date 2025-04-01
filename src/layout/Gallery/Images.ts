@@ -11,70 +11,16 @@ import image10 from '@/assets/images/10.jpg'
 import image11 from '@/assets/images/11.jpg'
 import image12 from '@/assets/images/12.jpg'
 
-const images = [   /* 이미지 경로를 리스트로 저장 */
-  {
-    alt: 'image01',
-    source: image01,
-    width: 640,
-    height: 960
-  },
-  {
-    alt: 'image02',
-    source: image02,
-    width: 640,
-    height: 960
-  },
-  {
-    alt: 'image03',
-    source: image03,
-    width: 640,
-    height: 960
-  },{
-    alt: 'image04',
-    source: image04,
-    width: 640,
-    height: 960
-  },{
-    alt: 'image05',
-    source: image05,
-    width: 640,
-    height: 960
-  },{
-    alt: 'image06',
-    source: image06,
-    width: 640,
-    height: 960
-  },{
-    alt: 'image07',
-    source: image07,
-    width: 640,
-    height: 960
-  },{
-    alt: 'image08',
-    source: image08,
-    width: 640,
-    height: 960
-  },{
-    alt: 'image09',
-    source: image09,
-    width: 640,
-    height: 960
-  },{
-    alt: 'image10',
-    source: image10,
-    width: 640,
-    height: 960
-  },{
-    alt: 'image11',
-    source: image11,
-    width: 640,
-    height: 960
-  },{
-    alt: 'image12',
-    source: image12,
-    width: 640,
-    height: 960
-  }
-];
-
+const imageSrc = [
+  image01, image02, image03, image04, image05,
+  image06, image07, image08, image09, image10,
+  image11, image12
+]
+const images = imageSrc.map(src => {
+  return ({
+    src: src,
+    width: 600,
+    height: 900
+  })
+})
 export default images;
