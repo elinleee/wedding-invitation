@@ -1,47 +1,49 @@
-import { Gallery, Item } from 'react-photoswipe-gallery';
+import { useState } from "react";
+
 import 'photoswipe/style.css';
 import images from '@/layout/Gallery/Images.ts';
+import "react-image-gallery/styles/css/image-gallery.css";
+import "react-photo-album/rows.css"
+
+import { ColumnsPhotoAlbum } from 'react-photo-album';
+import "react-photo-album/columns.css";
+
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+// import optional lightbox plugins
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+
+import styled from 'styled-components';
 
 const PhotoGallery = () => {
-  const smallItemStyles: React.CSSProperties = {
-    cursor: 'pointer',
-    objectFit: 'contain',
-    width: '100px',
-    height: '150px',
-  };
+  const [index, setIndex] = useState(-1);
 
   return (
-    <Gallery>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 0fr)',
-          gridGap: 2,
-        }}>
-        {images.map((image, index) => {
-          return (
-            <Item
-              key={index}
-              cropped
-              original={image.source}
-              thumbnail={image.source}
-              width={image.width}
-              height={image.height}>
-              {({ ref, open }) => (
-                <img
-                  style={smallItemStyles}
-                  alt={image.alt}
-                  src={image.source}
-                  ref={ref as React.MutableRefObject<HTMLImageElement>}
-                  onClick={open}
-                />
-              )}
-            </Item>
-          );
-        })}
-      </div>
-    </Gallery>
+    <Wrapper>
+      <ColumnsPhotoAlbum
+        photos={images}
+        onClick={({ index }) => setIndex(index)}
+      />
+      <Lightbox
+        slides={images}
+        open={index >= 0}
+        index={index}
+        close={() => setIndex(-1)}
+        plugins={[Thumbnails]}
+        thumbnails={{
+          border: 0,
+          width: 70,
+          gap: 5
+        }}
+      />
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  padding: 0 20px;
+`;
 
 export default PhotoGallery;
