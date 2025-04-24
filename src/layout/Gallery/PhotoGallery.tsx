@@ -20,10 +20,6 @@ import styled from 'styled-components';
 const PhotoGallery = () => {
   const [index, setIndex] = useState(-1);
 
-  const Wrapper = styled.div`
-  padding: 0 20px;
-`;
-
   return (
     <Wrapper>
       <ColumnsPhotoAlbum
@@ -45,5 +41,9 @@ const PhotoGallery = () => {
     </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  padding: 0 20px;
+`;
 
 export default PhotoGallery;
