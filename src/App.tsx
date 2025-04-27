@@ -10,6 +10,7 @@ import Guestbook from '@/layout/Guestbook/Guestbook.tsx';
 import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
+import ScrollSection from './components/ScrollSection';
 
 function App() {
   // const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -38,32 +39,42 @@ function App() {
 
   return (
     // <NavermapsProvider ncpClientId={ncpClientId}>
-      <Container>
+    <Container>
+      <ScrollSection>
         <Wrapper>
           <Main />
         </Wrapper>
+      </ScrollSection>
+      <ScrollSection>
         <Wrapper>
-          <Heading1>모시는 글</Heading1>
+          {/* <Heading1>모시는 글</Heading1> */}
           <Invitation />
         </Wrapper>
+      </ScrollSection>
+      <ScrollSection>
         <Wrapper ref={galleryRef}>
           <Heading1>Gallery</Heading1>
           <GalleryWrap />
         </Wrapper>
+      </ScrollSection>
+      <ScrollSection>
         <Wrapper>
           <Heading1>마음 전하실 곳</Heading1>
           <Account />
         </Wrapper>
+      </ScrollSection>
+      <ScrollSection>
         <Wrapper>
           <Heading1>오시는 길</Heading1>
           <Location />
         </Wrapper>
-        <Wrapper>
-          <Heading1>신랑 신부에게</Heading1>
-          <Guestbook />
-        </Wrapper>
-        <FloatingBar isVisible={isVisible} />
-      </Container>
+      </ScrollSection>
+      <Wrapper>
+        <Heading1>신랑 신부에게</Heading1>
+        <Guestbook />
+      </Wrapper>
+      <FloatingBar isVisible={isVisible} />
+    </Container>
     // </NavermapsProvider>
   );
 }
