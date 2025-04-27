@@ -57,21 +57,21 @@ const Name = styled.div`
   letter-spacing: 10px;
 `
 
-const AndTitle = styled.p`
-  // font-family: HSSanTokki20-Regular, serif;
-  font-size: 1.2rem;
-  color: #2F2120;
-  line-height: 120%;
-  white-space: pre-line;
-`;
+// const AndTitle = styled.p`
+//   // font-family: HSSanTokki20-Regular, serif;
+//   font-size: 1.2rem;
+//   color: #2F2120;
+//   line-height: 120%;
+//   white-space: pre-line;
+// `;
 
-const MainTitle = styled.p`
-  // font-family: HSSanTokki20-Regular, serif;
-  font-size: 1.7rem;
-  color: #2F2120;
-  line-height: 120%;
-  white-space: pre-line;
-`;
+// const MainTitle = styled.p`
+//   // font-family: HSSanTokki20-Regular, serif;
+//   font-size: 1.7rem;
+//   color: #2F2120;
+//   line-height: 120%;
+//   white-space: pre-line;
+// `;
 
 const SubTitle = styled.p`
   // font-size: 1.1rem;
