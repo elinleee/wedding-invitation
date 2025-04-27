@@ -1,5 +1,5 @@
 body {
-  font-family: SUITE-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: GowunDodum-Regular, SUITE-Regular, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -16,7 +16,21 @@ body {
   min-width: 280px;
   display: flex;
   justify-content: center;
-  background-color: #E0E7D9;
+  /* background-color: #E0E7D9; */
+}
+
+@font-face {
+  font-family: 'GowunDodum-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MICEMyungjo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEMyungjo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
