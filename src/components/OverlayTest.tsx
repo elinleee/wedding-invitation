@@ -1,27 +1,20 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Snowfall from './Snowfall';
 
 interface OverlayTextProps {
     backgroundImage: string;
     text: string;
 }
 
-const OverlayText: React.FC<OverlayTextProps> = ({ backgroundImage, text }) => {
+const OverlayText: React.FC<OverlayTextProps> = ({ backgroundImage, text}) => {
     return (
         <div
             style={{
                 width: '100%',
                 maxWidth: '450px',
-                // paddingTop: '20px',
                 position: 'relative',
-                // marginBottom: '20px',
-                // width: '100%',
-                // height: '100%',
-                // height: '400px', // 원하는 높이로 조정
-                // backgroundImage: `url(${backgroundImage})`,
-                // backgroundSize: 'cover',
-                // backgroundPosition: 'center',
-                // backgroundRepeat: 'no-repeat',
+                // overflow: 'hidden'
             }}
         >
             <MainImg src={backgroundImage} />
@@ -41,8 +34,9 @@ const OverlayText: React.FC<OverlayTextProps> = ({ backgroundImage, text }) => {
                     textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)', // 글자 가독성 높이기
                 }}
             >
-                {text}
+            {text}
             </div>
+            {/* <Snowfall/> */}
         </div>
     );
 };

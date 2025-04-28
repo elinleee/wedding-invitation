@@ -2,17 +2,22 @@ import styled from '@emotion/styled';
 import data from 'data.json';
 import mainImg from '@/assets/images/05.jpg'
 import OverlayText from '@/components/OverlayTest';
+import Snowfall from '@/components/Snowfall';
 
 const Main = () => {
   const { greeting } = data;
   return (
     <div>
-      <OverlayText
-        backgroundImage={mainImg}
-        text="Our Wedding Day"
-      />
-      {/* <MainImg src={mainImg} /> */}
-
+      <div style={{
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <OverlayText
+          backgroundImage={mainImg}
+          text="Our Wedding Day"
+        />
+        <Snowfall/>
+      </div>
       <NameContainer>
         <NameBox>
           <GroomBride>GROOM</GroomBride>
