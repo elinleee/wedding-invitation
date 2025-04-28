@@ -1,12 +1,17 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
 import mainImg from '@/assets/images/05.jpg'
+import OverlayText from '@/components/OverlayTest';
 
 const Main = () => {
   const { greeting } = data;
   return (
     <div>
-      <MainImg src={mainImg} />
+      <OverlayText
+        backgroundImage={mainImg}
+        text="Our Wedding Day"
+      />
+      {/* <MainImg src={mainImg} /> */}
 
       <NameContainer>
         <NameBox>
@@ -36,7 +41,7 @@ const MainImg = styled.img`
 const NameContainer = styled.div`
   display: flex;
   // width: 80vw;
-  margin: 0 auto;
+  margin: 20px auto;
   // height: 100vh;
 `
 
@@ -48,11 +53,12 @@ const NameBox = styled.div`
 `
 
 const GroomBride = styled.div`
-  color: pink;
+  // color: rgb(176, 188, 175);
+  color:rgb(216, 209, 78)
 `
 
 const Name = styled.div`
-  // color: #22ffff;
+  // color:rgb(187, 220, 184);
   font-size: 1.8rem;
   letter-spacing: 10px;
 `

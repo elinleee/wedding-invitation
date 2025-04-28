@@ -47,7 +47,7 @@ function App() {
       </ScrollSection>
       <ScrollSection>
         <Wrapper>
-          {/* <Heading1>모시는 글</Heading1> */}
+          <Heading1>모시는 글</Heading1>
           <Invitation />
         </Wrapper>
       </ScrollSection>
