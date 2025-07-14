@@ -11,6 +11,7 @@ import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
 import ScrollSection from './components/ScrollSection';
+import Interview from './layout/Interview/Interview';
 
 function App() {
   // const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -47,7 +48,7 @@ function App() {
       </ScrollSection>
       <ScrollSection>
         <Wrapper>
-          <Heading1>모시는 글</Heading1>
+          {/* <Heading1>모시는 글</Heading1> */}
           <Invitation />
         </Wrapper>
       </ScrollSection>
@@ -58,6 +59,10 @@ function App() {
         </Wrapper>
       </ScrollSection>
       <ScrollSection>
+        <Wrapper>
+        <Heading1>Q&A</Heading1>
+        <Interview />
+        </Wrapper>
         <Wrapper>
           <Heading1>마음 전하실 곳</Heading1>
           <Account />

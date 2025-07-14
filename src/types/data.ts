@@ -52,3 +52,9 @@ export interface ILocationInfo {
   title: string;
   desc: string;
 }
+
+
+export interface IInterviewInfo {
+  question: string;
+  answer: string;
+}

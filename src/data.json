@@ -104,6 +104,20 @@
       "desc": "\uD83D\uDC49\uD83C\uDFFB 건물 내 2시간 무료주차 (홀에서 주차정산 필요)"
     }
   ],
+  "interviewInfo":[
+    {
+      "question": "자, 이제 시작이야",
+      "answer": "내꿈을!!"
+    },
+    {
+      "question": "아침에 눈을 뜨면",
+      "answer": "지난 밤이 궁금해"
+    },
+    {
+      "question": "한 번 더 나에게",
+      "answer": "질풍같은 용기를"
+    }
+  ],
   "emojis": [
     "❤️",
     "💛",
