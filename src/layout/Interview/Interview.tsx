@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import data from 'data.json';
 import QnA from './QnA';
 
 const Interview = () => {
