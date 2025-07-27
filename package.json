@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "echo 'darangji.world' > ./build/CNAME && gh-pages -d dist --remote upstream"
+    "deploy": "gh-pages -d dist --remote upstream"
   },
   "homepage": "https://darangji.github.io/wedding-invitation/",
   "dependencies": {
