@@ -20,12 +20,12 @@ const Snowfall: React.FC = () => {
 
     const snowflakes: { x: number; y: number; radius: number; speed: number }[] = [];
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 35; i++) { // 눈 개수
       snowflakes.push({
         x: Math.random() * width,
         y: Math.random() * height,
         radius: Math.random() * 4 + 1,
-        speed: Math.random() * 1 + 0.3,
+        speed: Math.random() * 0.4 + 0.2, // 눈 속도
       });
     }
 
