@@ -3,10 +3,14 @@ import styled from '@emotion/styled';
 
 interface OverlayTextProps {
     backgroundImage: string;
-    text: string;
+    title: string;
+    subTitle1: string;
+    subTitle2: string;
 }
 
-const OverlayText: React.FC<OverlayTextProps> = ({ backgroundImage, text}) => {
+const OverlayText: React.FC<OverlayTextProps> = ({ backgroundImage, title, subTitle1, subTitle2}) => {
+    var topFont = 'iceJaram-Rg'
+    var bottomFont = 'iceJaram-Rg'
     return (
         <div
             style={{
@@ -17,24 +21,9 @@ const OverlayText: React.FC<OverlayTextProps> = ({ backgroundImage, text}) => {
             }}
         >
             <MainImg src={backgroundImage} />
-            <div
-                style={{
-                    position: 'absolute',
-                    top: '75%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    color: 'white',
-                    lineHeight: '1em',
-                    //   fontFamily: 'InkLipquid',
-                    // fontFamily: 'iceJaram-Rg',
-                    fontFamily: 'Arita-buri-SemiBold',
-                    fontSize: '3rem',
-                    //   fontWeight: 'bold',
-                    textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)', // 글자 가독성 높이기
-                }}
-            >
-            {text}
-            </div>
+            <TopText style={{ top: '15%', fontFamily: topFont }}>{title}</TopText>
+            <BottomText style={{ top: '83%', fontFamily: bottomFont }}>{subTitle1}</BottomText>
+            <BottomText style={{ top: '89%', fontFamily: bottomFont }}>{subTitle2}</BottomText>
             {/* <Snowfall/> */}
         </div>
     );
@@ -47,4 +36,26 @@ const MainImg = styled.img`
   width: 100%;
   max-width: 450px;
   padding-top: 20px;
+`;
+
+const TopText = styled.div`
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    line-height: 1em;
+    font-size: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); // 글자 가독성 높이기
+`;
+
+const BottomText = styled.div`
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    line-height: 1em;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); // 글자 가독성 높이기
 `;

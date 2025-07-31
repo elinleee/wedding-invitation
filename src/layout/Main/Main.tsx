@@ -14,7 +14,11 @@ const Main = () => {
       }}>
         <OverlayText
           backgroundImage={mainImg}
-          text="Our Wedding Day"
+          // title="Our Wedding Day"
+          title="A Celebration of our love "
+          // subTitle="이다솔　♥　이영지"
+          subTitle1='아름다운 날,'
+          subTitle2='소중한 분들을 초대합니다♥'
         />
         <Snowfall/>
       </div>
