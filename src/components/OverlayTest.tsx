@@ -43,7 +43,7 @@ const OverlayText: React.FC<OverlayTextProps> = ({ backgroundImage, text}) => {
 export default OverlayText;
 
 const MainImg = styled.img`
-  border-radius: 200px 200px 0 0;
+//   border-radius: 200px 200px 0 0;
   width: 100%;
   max-width: 450px;
   padding-top: 20px;
